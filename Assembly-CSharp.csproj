@@ -57,6 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\jsScript.cs" />
+    <Compile Include="Assets\Scripts\MT.cs" />
+    <Compile Include="Assets\Scripts\MTcube.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Scripts\Hologram.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
