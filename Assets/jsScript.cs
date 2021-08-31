@@ -24,7 +24,7 @@ public class jsScript : MonoBehaviour
     }
     public void HSButton() 
     {
-        StartCoroutine(SendGetRequestHS("http://127.0.0.1:3000/GetAll"));
+        StartCoroutine(SendGetRequestHS("https://jsdbvahiha.herokuapp.com/GetAll"));
     }
     IEnumerator SendGetRequestHS(string url )
     {
@@ -74,7 +74,7 @@ public class jsScript : MonoBehaviour
             score = int.Parse(siScoreIF.text)
 
         };
-        StartCoroutine(SICheckIfUserExists("http://127.0.0.1:3000/CheckIfUserExists", ud.GetNameInURLEncoding(), ud));
+        StartCoroutine(SICheckIfUserExists("https://jsdbvahiha.herokuapp.com/CheckIfUserExists", ud.GetNameInURLEncoding(), ud));
     }
     IEnumerator SICheckIfUserExists(string url, string urlEncodedData, UserData udForPost)
     {
@@ -98,7 +98,7 @@ public class jsScript : MonoBehaviour
             }
             else
             {
-                StartCoroutine(SendGetRequest("http://127.0.0.1:3000/Update", udForPost.GetNameInURLEncoding()));
+                StartCoroutine(SendGetRequest("https://jsdbvahiha.herokuapp.com/Update", udForPost.GetNameInURLEncoding()));
 
                 print("user updated");
             }
@@ -119,7 +119,7 @@ public class jsScript : MonoBehaviour
                 score = 0
             };
 
-            StartCoroutine(CheckIfNameExists("http://127.0.0.1:3000/CheckIfNameExists", ud.GetNameInURLEncoding(), ud));
+            StartCoroutine(CheckIfNameExists("https://jsdbvahiha.herokuapp.com/CheckIfNameExists", ud.GetNameInURLEncoding(), ud));
         }
         else
         {
@@ -145,7 +145,7 @@ public class jsScript : MonoBehaviour
             if (usersData.usersData.Length == 0)
             {
 
-                StartCoroutine(SendDataPost("http://127.0.0.1:3000/createUser", udForPost));
+                StartCoroutine(SendDataPost("https://jsdbvahiha.herokuapp.com/createUser", udForPost));
                 print("user created");
             }
             else
@@ -194,8 +194,8 @@ public class jsScript : MonoBehaviour
     };
     void Start()
     {
-        // StartCoroutine(SendDataPost("http://127.0.0.1:3000/createUser", userData));
-        //StartCoroutine(SendGetRequest("http://127.0.0.1:3000/Update", userNameData.GetNameInURLEncoding()));
+        // StartCoroutine(SendDataPost("https://jsdbvahiha.herokuapp.com/createUser", userData));
+        //StartCoroutine(SendGetRequest("https://jsdbvahiha.herokuapp.com/Update", userNameData.GetNameInURLEncoding()));
         hsList = new List<UserData>();
     }
 
